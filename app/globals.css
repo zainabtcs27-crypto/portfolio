@@ -1,0 +1,196 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Light theme defaults */
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+  --secondary: #f3f4f6;
+  --muted: #e5e7eb;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --radius: 0.625rem;
+}
+
+/* Dark theme */
+html.dark {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --primary: #3b82f6;
+  --primary-light: #1e3a8a;
+  --secondary: #1f2937;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --border: #374151;
+}
+
+/* Themes */
+html[data-theme="blue"] {
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+}
+
+html[data-theme="blue"].dark {
+  --primary: #3b82f6;
+  --primary-light: #1e3a8a;
+}
+
+html[data-theme="purple"] {
+  --primary: #9333ea;
+  --primary-light: #f3e8ff;
+}
+
+html[data-theme="purple"].dark {
+  --primary: #a855f7;
+  --primary-light: #4c1d95;
+}
+
+html[data-theme="green"] {
+  --primary: #16a34a;
+  --primary-light: #dcfce7;
+}
+
+html[data-theme="green"].dark {
+  --primary: #22c55e;
+  --primary-light: #143618;
+}
+
+html[data-theme="orange"] {
+  --primary: #ea580c;
+  --primary-light: #fed7aa;
+}
+
+html[data-theme="orange"].dark {
+  --primary: #f97316;
+  --primary-light: #431407;
+}
+
+html[data-theme="red"] {
+  --primary: #dc2626;
+  --primary-light: #fee2e2;
+}
+
+html[data-theme="red"].dark {
+  --primary: #ef4444;
+  --primary-light: #45140d;
+}
+
+html[data-theme="pink"] {
+  --primary: #db2777;
+  --primary-light: #fce7f3;
+}
+
+html[data-theme="pink"].dark {
+  --primary: #ec4899;
+  --primary-light: #500724;
+}
+
+html[data-theme="cyan"] {
+  --primary: #0891b2;
+  --primary-light: #cffafe;
+}
+
+html[data-theme="cyan"].dark {
+  --primary: #06b6d4;
+  --primary-light: #082f49;
+}
+
+html[data-theme="indigo"] {
+  --primary: #4f46e5;
+  --primary-light: #e0e7ff;
+}
+
+html[data-theme="indigo"].dark {
+  --primary: #6366f1;
+  --primary-light: #1e1b4b;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 inline-block;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--primary)] text-white hover:opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--secondary)] text-[var(--foreground)] hover:opacity-80;
+  }
+
+  .section {
+    @apply py-20 px-6;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .card {
+    @apply bg-[var(--secondary)] rounded-xl p-6 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
