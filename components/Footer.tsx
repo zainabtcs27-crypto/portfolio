@@ -68,7 +68,7 @@ export default function Footer() {
               Have a question? Feel free to reach out!
             </p>
             <a href="mailto:your@email.com" className="text-[var(--primary)] font-medium hover:opacity-80">
-              your@email.com
+              zainabt.cs27@email.com
             </a>
           </div>
         </div>
