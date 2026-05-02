@@ -35,10 +35,9 @@ export default function Contact() {
   }
 
   const socialLinks = [
-    { icon: '𝕱', label: 'GitHub', url: 'https://github.com' },
-    { icon: '🔗', label: 'LinkedIn', url: 'https://linkedin.com' },
-    { icon: '𝕻', label: 'Twitter', url: 'https://twitter.com' },
-    { icon: '📧', label: 'Email', url: 'mailto:your@email.com' },
+    { icon: '𝕱', label: 'GitHub', url: ' https://github.com/zainabtcs27-crypto' },
+    { icon: '🔗', label: 'LinkedIn', url: 'https://www.linkedin.com/in/zainab-tariq-3a1580388' },
+    { icon: '📧', label: 'Email', url: 'mailto:zainabt.cs27@gmail.com' },
   ]
 
   return (
@@ -104,12 +103,12 @@ export default function Contact() {
                   href="mailto:your@email.com"
                   className="text-lg font-medium text-[var(--primary)] hover:opacity-80"
                 >
-                  your@email.com
+                  zainabt.cs27@gmail.com
                 </a>
               </div>
               <div>
                 <p className="text-[var(--muted-foreground)] mb-2">Location</p>
-                <p className="text-lg font-medium">Your City, Country</p>
+                <p className="text-lg font-medium">Lahore, Pakistan</p>
               </div>
               <div>
                 <p className="text-[var(--muted-foreground)] mb-3">

@@ -18,30 +18,10 @@ export default function Projects() {
       id: 3,
       title: 'Stop Watch',
       description: 'Designed and developed an interactive Time Tools web application with features like stopwatch, countdown timer, calendar, and world clock, emphasizing responsive design and real-time updates using JavaScript.',
-      tags: ['React', 'OpenAI API', 'Express', 'MongoDB'],
-      link: '#',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'Web Development'],
+      link: 'https://stop-watch-livid-five.vercel.app/',
     },
-    {
-      id: 4,
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for managing multiple social accounts.',
-      tags: ['Next.js', 'TypeScript', 'Chart.js', 'AWS'],
-      link: '#',
-    },
-    {
-      id: 5,
-      title: 'Mobile Fitness App',
-      description: 'Cross-platform fitness tracking with workout routines.',
-      tags: ['React Native', 'Firebase', 'Node.js'],
-      link: '#',
-    },
-    {
-      id: 6,
-      title: 'Learning Management System',
-      description: 'Complete LMS with video streaming and interactive courses.',
-      tags: ['Next.js', 'PostgreSQL', 'Video.js', 'Docker'],
-      link: '#',
-    },
+  
   ]
 
   return (
