@@ -1,37 +1,63 @@
 export default function About() {
   return (
-    <section id="about" className="section bg-[var(--secondary)]">
-      <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-lg mb-4 text-[var(--muted-foreground)] leading-relaxed">
-              Recent Computer Science graduate with a strong interest in Python programming, AI, and Machine Learning.             </p>
-            <p className="text-lg mb-4 text-[var(--muted-foreground)] leading-relaxed">
-              Possesses foundational knowledge gained through academic projects and practical learning in developing software solutions, data analysis, and basic machine learning models. Strong problem-solving, analytical, and teamwork skills with a passion for learning new technologies.            </p>
-            <p className="text-lg text-[var(--muted-foreground)] leading-relaxed">
-              Eager to begin a professional career and contribute technical skills in a growth-oriented organization.            </p>
+    <section id="about" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden">
+
+      <div className="container mx-auto px-6 relative z-10">
+
+        {/* HEADING */}
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-left">
+          About{" "}
+          <span className="bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-500 bg-clip-text text-transparent">
+            Me
+          </span>
+        </h2>
+
+        {/* MAIN GRID */}
+        <div className="grid md:grid-cols-2 gap-10 items-start">
+
+          {/* LEFT SIDE */}
+          <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-8 text-left shadow-lg hover:shadow-rose-500/10 transition">
+
+            <p className="text-gray-300 text-lg mb-4 leading-relaxed">
+              I am <span className="text-rose-400 font-semibold">Zainab Tariq</span>,
+              a Computer Science graduate passionate about Python programming, AI and Machine Learning.
+            </p>
+
+            <p className="text-gray-400 leading-relaxed mb-4">
+              Possesses foundational knowledge gained through academic projects and practical learning in developing software solutions, data analysis, and basic machine learning models. Strong problem-solving, analytical, and teamwork skills with a passion for learning new technologies.
+            </p>
+
+            <p className="text-gray-400 leading-relaxed">
+              Eager to begin a professional career and contribute technical skills in a growth-oriented organization.
+            </p>
+
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { label: 'Projects Completed', value: '3+' },
-              { label: 'Years Experience', value: '0+' },
-              { label: 'Happy Clients', value: '0+' },
-              { label: 'Code Commits', value: '1000+' },
-            ].map((stat) => (
-              <div
-                key={stat.label}
-                className="card text-center"
-              >
-                <div className="text-3xl font-bold text-[var(--primary)] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-[var(--muted-foreground)]">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+
+          {/* RIGHT SIDE STATS */}
+          <div className="flex flex-col justify-center gap-4 max-w-sm mx-auto w-full">
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center 
+              transition-all duration-300 hover:bg-rose-500/10 hover:border-rose-400/40 
+              hover:shadow-lg hover:shadow-rose-500/20 cursor-pointer">
+
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent">
+                10+
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">Projects</p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center 
+              transition-all duration-300 hover:bg-rose-500/10 hover:border-rose-400/40 
+              hover:shadow-lg hover:shadow-rose-500/20 cursor-pointer">
+
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-fuchsia-400 bg-clip-text text-transparent">
+                500+
+              </h3>
+              <p className="text-gray-400 text-sm mt-2">Commits</p>
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

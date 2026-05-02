@@ -11,25 +11,38 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[var(--background)] border-b border-[var(--border)] z-40 backdrop-blur-sm">
-      <div className="container flex items-center justify-between h-16 px-6">
-        <Link href="#" className="font-bold text-xl text-[var(--primary)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/70 border-b border-white/10 shadow-lg">
+
+      <div className="container mx-auto flex items-center justify-between h-16 px-6">
+
+        {/* Logo */}
+        <Link
+          href="#"
+          className="text-2xl font-bold bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-500 bg-clip-text text-transparent"
+        >
           Portfolio
         </Link>
-        <div className="hidden md:flex items-center gap-8">
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-2">
+
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium hover:text-[var(--primary)] transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-100 rounded-full transition duration-300 hover:text-white hover:bg-rose-500/30 hover:shadow-md hover:shadow-rose-500/20"
             >
               {item.label}
             </a>
           ))}
+
         </div>
-        <button className="md:hidden p-2" aria-label="Menu">
+
+        {/* Mobile Button */}
+        <button className="md:hidden text-white text-2xl hover:text-rose-400 transition">
           ☰
         </button>
+
       </div>
     </nav>
   )
