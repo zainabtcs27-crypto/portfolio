@@ -4,81 +4,89 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[var(--secondary)] border-t border-[var(--border)] py-12">
-      <div className="container">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <h3 className="font-bold text-lg text-[var(--primary)] mb-4">
-              Portfolio
-            </h3>
-            <p className="text-[var(--muted-foreground)] text-sm">
-              Customizable student portfolio with beautiful themes.
-            </p>
-          </div>
+    <footer className="bg-[#0a0a0a] text-white relative overflow-hidden">
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#about" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#skills" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  Projects
-                </a>
-              </li>
-            </ul>
-          </div>
+      {/* Background Glow */}
+      <div className="absolute w-72 h-72 bg-rose-500/10 blur-3xl rounded-full top-0 left-0"></div>
+      <div className="absolute w-72 h-72 bg-pink-500/10 blur-3xl rounded-full bottom-0 right-0"></div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-[var(--muted-foreground)] hover:text-[var(--primary)]">
-                  GitHub
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div className="container mx-auto px-6 py-16 relative z-10">
 
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold mb-4">Get In Touch</h4>
-            <p className="text-[var(--muted-foreground)] text-sm mb-2">
-              Have a question? Feel free to reach out!
-            </p>
-            <a href="mailto:your@email.com" className="text-[var(--primary)] font-medium hover:opacity-80">
-              zainabt.cs27@email.com
-            </a>
-          </div>
-        </div>
+        {/* TOP SECTION */}
+        <div className="text-center mb-12">
 
-        {/* Bottom */}
-        <div className="border-t border-[var(--border)] pt-8 text-center text-sm text-[var(--muted-foreground)]">
-          <p>
-            © {currentYear} Your Name. All rights reserved. | Made with ❤️
+          <h3 className="text-2xl font-bold mb-3 
+          bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-500 
+          bg-clip-text text-transparent">
+            Zainab Tariq
+          </h3>
+
+          <p className="text-gray-400 max-w-md mx-auto text-sm">
+            Passionate Computer Science graduate focused on building modern web applications and AI-based solutions.
           </p>
+
         </div>
+
+        {/* NAV LINKS */}
+        <div className="flex justify-center flex-wrap gap-6 mb-10 text-sm">
+
+          <a href="#about" className="text-gray-400 hover:text-rose-400 transition">
+            About
+          </a>
+
+          <a href="#skills" className="text-gray-400 hover:text-pink-400 transition">
+            Skills
+          </a>
+
+          <a href="#projects" className="text-gray-400 hover:text-fuchsia-400 transition">
+            Projects
+          </a>
+
+          <a href="#contact" className="text-gray-400 hover:text-rose-300 transition">
+            Contact
+          </a>
+
+        </div>
+
+        {/* SOCIALS */}
+        <div className="flex justify-center gap-4 mb-10">
+
+          <a
+            href="https://github.com/zainabtcs27-crypto"
+            target="_blank"
+            className="px-4 py-2 rounded-full border border-white/10 
+            hover:border-rose-400/40 hover:bg-rose-500/10 transition text-sm"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/zainab-tariq-3a1580388"
+            target="_blank"
+            className="px-4 py-2 rounded-full border border-white/10 
+            hover:border-pink-400/40 hover:bg-pink-500/10 transition text-sm"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="mailto:zainabt.cs27@gmail.com"
+            className="px-4 py-2 rounded-full border border-white/10 
+            hover:border-fuchsia-400/40 hover:bg-fuchsia-500/10 transition text-sm"
+          >
+            Email
+          </a>
+
+        </div>
+
+        {/* DIVIDER */}
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-rose-400/40 to-transparent mb-6"></div>
+
+        {/* BOTTOM */}
+        <div className="text-center text-gray-500 text-sm">
+          © {currentYear} Zainab Tariq — Built with ❤️ using modern web technologies
+        </div>
+
       </div>
     </footer>
   )

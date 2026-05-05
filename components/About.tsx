@@ -2,6 +2,9 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-[#0a0a0a] text-white relative overflow-hidden">
 
+      {/* TOP GRADIENT (same as Skills) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-rose-900/10 via-black to-black"></div>
+
       <div className="container mx-auto px-6 relative z-10">
 
         {/* HEADING */}
