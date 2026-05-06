@@ -30,19 +30,19 @@ export default function Footer() {
         {/* NAV LINKS */}
         <div className="flex justify-center flex-wrap gap-6 mb-10 text-sm">
 
-          <a href="#about" className="text-gray-400 hover:text-rose-400 transition">
+          <a href="#about" className="text-white hover:text-rose-400 transition">
             About
           </a>
 
-          <a href="#skills" className="text-gray-400 hover:text-pink-400 transition">
+          <a href="#skills" className="text-white hover:text-pink-400 transition">
             Skills
           </a>
 
-          <a href="#projects" className="text-gray-400 hover:text-fuchsia-400 transition">
+          <a href="#projects" className="text-white hover:text-fuchsia-400 transition">
             Projects
           </a>
 
-          <a href="#contact" className="text-gray-400 hover:text-rose-300 transition">
+          <a href="#contact" className="text-white hover:text-rose-300 transition">
             Contact
           </a>
 
@@ -55,7 +55,7 @@ export default function Footer() {
             href="https://github.com/zainabtcs27-crypto"
             target="_blank"
             className="px-4 py-2 rounded-full border border-white/10 
-            hover:border-rose-400/40 hover:bg-rose-500/10 transition text-sm"
+            text-white hover:border-rose-400/40 hover:bg-rose-500/10 transition text-sm"
           >
             GitHub
           </a>
@@ -64,7 +64,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/zainab-tariq-3a1580388"
             target="_blank"
             className="px-4 py-2 rounded-full border border-white/10 
-            hover:border-pink-400/40 hover:bg-pink-500/10 transition text-sm"
+            text-white hover:border-pink-400/40 hover:bg-pink-500/10 transition text-sm"
           >
             LinkedIn
           </a>
@@ -72,7 +72,7 @@ export default function Footer() {
           <a
             href="mailto:zainabt.cs27@gmail.com"
             className="px-4 py-2 rounded-full border border-white/10 
-            hover:border-fuchsia-400/40 hover:bg-fuchsia-500/10 transition text-sm"
+            text-white hover:border-fuchsia-400/40 hover:bg-fuchsia-500/10 transition text-sm"
           >
             Email
           </a>

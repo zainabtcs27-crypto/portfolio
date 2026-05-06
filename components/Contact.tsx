@@ -3,11 +3,13 @@
 import { useState } from 'react'
 
 export default function Contact() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   })
+
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => {
@@ -23,7 +25,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-28 bg-[#0a0a0a] text-white relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-28 bg-[#0a0a0a] text-white relative overflow-hidden"
+    >
 
       {/* Background Glow */}
       <div className="absolute w-80 h-80 bg-rose-500/10 blur-3xl rounded-full top-0 left-0"></div>
@@ -35,6 +40,7 @@ export default function Contact() {
 
           {/* LEFT SIDE */}
           <div>
+
             <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               Let’s Build{" "}
               <span className="bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-500 bg-clip-text text-transparent">
@@ -47,23 +53,41 @@ export default function Contact() {
               If you have something exciting — let’s talk.
             </p>
 
-            {/* Floating Cards */}
+            {/* FLOATING CARDS */}
             <div className="mt-10 space-y-4">
 
-              <div className="bg-white/5 border border-white/10 p-4 rounded-xl 
-              backdrop-blur-md hover:border-rose-400/40 transition">
+              <a
+                href="mailto:zainabt.cs27@gmail.com"
+                className="block text-white bg-white/5 border border-white/10 p-4 rounded-xl 
+                backdrop-blur-md hover:border-rose-400/40 transition"
+              >
                 📧 zainabt.cs27@gmail.com
-              </div>
+              </a>
 
-              <div className="bg-white/5 border border-white/10 p-4 rounded-xl 
+              <div className="text-white bg-white/5 border border-white/10 p-4 rounded-xl 
               backdrop-blur-md hover:border-pink-400/40 transition ml-6">
                 📍 Lahore, Pakistan
               </div>
 
-              <div className="bg-white/5 border border-white/10 p-4 rounded-xl 
-              backdrop-blur-md hover:border-fuchsia-400/40 transition ml-12">
-                🔗 GitHub / LinkedIn
-              </div>
+              <a
+                href="https://github.com/zainabtcs27-crypto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white bg-white/5 border border-white/10 p-4 rounded-xl 
+                backdrop-blur-md hover:border-fuchsia-400/40 transition ml-12"
+              >
+                💻 GitHub Profile
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/zainab-tariq-3a1580388"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-white bg-white/5 border border-white/10 p-4 rounded-xl 
+                backdrop-blur-md hover:border-rose-300/40 transition ml-16"
+              >
+                🔗 LinkedIn Profile
+              </a>
 
             </div>
           </div>
@@ -71,7 +95,7 @@ export default function Contact() {
           {/* RIGHT SIDE FORM */}
           <div className="relative">
 
-            {/* Glow Behind Form */}
+            {/* Glow */}
             <div className="absolute inset-0 bg-gradient-to-r from-rose-500/10 via-pink-500/10 to-fuchsia-500/10 blur-2xl rounded-2xl"></div>
 
             <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md">
@@ -115,13 +139,26 @@ export default function Contact() {
                   text-white placeholder-gray-500 focus:outline-none focus:border-rose-400 resize-none"
                 />
 
+                {/* 🔥 PREMIUM BUTTON */}
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl font-semibold 
-                  bg-gradient-to-r from-rose-500 via-pink-500 to-fuchsia-500 
-                  hover:scale-[1.02] transition"
+                  className="w-full relative overflow-hidden py-3 rounded-xl font-semibold text-white
+                  bg-black/40 border border-white/10 backdrop-blur-md
+                  shadow-lg shadow-rose-500/10
+                  transition-all duration-300 group
+                  hover:border-rose-400/40 hover:shadow-rose-500/30 hover:scale-[1.03]
+                  active:scale-95"
                 >
-                  Send Message 🚀
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                     Send Message
+                  </span>
+
+                  {/* Shine Effect */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
+                  -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+
+                  {/* Glow */}
+                  <span className="absolute inset-0 rounded-xl bg-rose-500/10 opacity-0 group-hover:opacity-100 transition"></span>
                 </button>
 
                 {submitted && (

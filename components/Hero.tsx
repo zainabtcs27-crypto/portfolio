@@ -34,9 +34,9 @@ export default function Hero() {
   }, [subIndex, index, deleting])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] text-white">
+    <section className="relative min-h-screen flex items-center justify-center bg-[#0a0a0a] text-white overflow-hidden">
 
-      {/* Subtle Gradient Overlay */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-rose-900/20 via-transparent to-black"></div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
@@ -65,21 +65,29 @@ export default function Hero() {
           focusing on building impactful and user-friendly applications.
         </p>
 
-        {/* Buttons */}
+        {/* BUTTONS (MATCHED STYLE) */}
         <div className="flex justify-center gap-4 flex-wrap">
+
+          {/* View Projects */}
           <Link
             href="#projects"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold shadow-md hover:scale-105 hover:shadow-rose-500/40 transition duration-300"
+            className="px-6 py-3 rounded-xl border border-rose-400/30 
+            text-rose-300 hover:text-white hover:bg-rose-500/20 
+            transition duration-300"
           >
             🚀 View Projects
           </Link>
 
+          {/* Contact */}
           <Link
             href="#contact"
-            className="px-6 py-3 rounded-xl border border-rose-400/30 text-rose-300 hover:text-white hover:bg-rose-500/20 transition duration-300"
+            className="px-6 py-3 rounded-xl border border-rose-400/30 
+            text-rose-300 hover:text-white hover:bg-rose-500/20 
+            transition duration-300"
           >
             📩 Contact Me
           </Link>
+
         </div>
 
         {/* Skills */}
@@ -87,7 +95,8 @@ export default function Hero() {
           {["Python", "AI", "ML", "Data Science"].map((item) => (
             <span 
               key={item} 
-              className="px-3 py-1 text-sm bg-rose-400/10 text-rose-300 border border-rose-400/20 rounded-full hover:bg-rose-400/20 transition"
+              className="px-3 py-1 text-sm bg-rose-400/10 text-rose-300 
+              border border-rose-400/20 rounded-full hover:bg-rose-400/20 transition"
             >
               {item}
             </span>

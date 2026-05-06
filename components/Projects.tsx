@@ -56,7 +56,7 @@ export default function Projects() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-500 rounded-t-2xl"></div>
 
               {/* TITLE */}
-              <h3 className="text-xl font-bold mb-3 group-hover:text-rose-400 transition">
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-rose-400 transition">
                 {project.title}
               </h3>
 
